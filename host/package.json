@@ -1,17 +1,19 @@
 {
   "name": "host",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "scripts": {
-    "build": "cross-env CAP_BUILD=true webpack --mode production",
+    "build": "run-p build:about build:list && cross-env CAP_BUILD=true webpack --mode production",
     "build:dev": "webpack --mode development",
     "build:start": "cd dist && PORT=8080 npx serve",
     "start": "webpack serve --open --mode development",
-    "start:live": "webpack serve --open --mode development --live-reload --hot"
+    "start:live": "webpack serve --open --mode development --live-reload --hot",
+    "build:about": "cd ../about && npm run build",
+    "build:list": "cd ../list && npm run build"
   },
   "license": "MIT",
   "author": {
-    "name": "Jack Herrington",
-    "email": "jherr@pobox.com"
+    "name": "Simon Grimm",
+    "email": "simon@galaxies.dev"
   },
   "devDependencies": {
     "@babel/core": "^7.15.8",
@@ -27,6 +29,7 @@
     "cross-env": "^7.0.3",
     "css-loader": "^6.3.0",
     "html-webpack-plugin": "^5.3.2",
+    "npm-run-all": "^4.1.5",
     "postcss": "^8.2.1",
     "postcss-loader": "^4.1.0",
     "style-loader": "^3.3.0",
