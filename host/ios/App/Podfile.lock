@@ -1,0 +1,35 @@
+PODS:
+  - Capacitor (5.2.1):
+    - CapacitorCordova
+  - CapacitorCordova (5.2.1)
+  - IonicEnterpriseFederatedCapacitor (0.1.4):
+    - Capacitor
+    - IonicLiveUpdates (~> 0.4.1)
+  - IonicLiveUpdates (0.4.1)
+
+DEPENDENCIES:
+  - "Capacitor (from `../../node_modules/@capacitor/ios`)"
+  - "CapacitorCordova (from `../../node_modules/@capacitor/ios`)"
+  - "IonicEnterpriseFederatedCapacitor (from `../../node_modules/@ionic-enterprise/federated-capacitor`)"
+
+SPEC REPOS:
+  trunk:
+    - IonicLiveUpdates
+
+EXTERNAL SOURCES:
+  Capacitor:
+    :path: "../../node_modules/@capacitor/ios"
+  CapacitorCordova:
+    :path: "../../node_modules/@capacitor/ios"
+  IonicEnterpriseFederatedCapacitor:
+    :path: "../../node_modules/@ionic-enterprise/federated-capacitor"
+
+SPEC CHECKSUMS:
+  Capacitor: 36510199454641113344c2e5ef43bf3f54b5af79
+  CapacitorCordova: d173eeb1635e62aa95a20874a5d5cbbf0aa1e0df
+  IonicEnterpriseFederatedCapacitor: a99f28b8d698adc02acbd7239b146c9415f9b667
+  IonicLiveUpdates: 6fbb00e7cf563474253092bedd2d3abd9e846e6d
+
+PODFILE CHECKSUM: 47937f9c78b79303ff4b620c93921c30dc98f77d
+
+COCOAPODS: 1.11.3

@@ -1,0 +1,15 @@
+{
+  "name": "superApp",
+  "integrations": {
+    "enterprise": {
+      "keyId": 3448,
+      "productKey": "key_eb1a05dddc1d4992a280ffe95243ecdc",
+      "appId": "c47655ce",
+      "orgId": "d3600444-a7ac-42c8-819c-e45176e074e2",
+      "registries": [
+        "@ionic-enterprise;https://registry.ionicframework.com/"
+      ]
+    }
+  },
+  "type": "custom"
+}
