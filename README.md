@@ -30,7 +30,7 @@ npm run build
 npx cap sync
 ```
 
-This will build all MFEs and combine them in our Capacitor Super app!
+This will build all MFEs and combine them in our Capacitor super app!
 
 ## Preview
 <div style="display: flex; flex-direction: 'row';">
