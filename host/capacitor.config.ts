@@ -6,12 +6,13 @@ const config: CapacitorConfig = {
   webDir: 'dist',
   server: {
     androidScheme: 'https',
+    // url: 'http://192.168.1.52:8080',
   },
   plugins: {
-    // Federated Capacitor configuration
     FederatedCapacitor: {
+      liveUpdatesKey: '',
       shell: {
-        name: 'host',
+        name: 'shell',
       },
       apps: [
         {

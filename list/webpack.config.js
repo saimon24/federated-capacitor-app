@@ -1,14 +1,14 @@
-const HtmlWebPackPlugin = require("html-webpack-plugin");
-const ModuleFederationPlugin = require("webpack/lib/container/ModuleFederationPlugin");
+const HtmlWebPackPlugin = require('html-webpack-plugin');
+const ModuleFederationPlugin = require('webpack/lib/container/ModuleFederationPlugin');
 
-const deps = require("./package.json").dependencies;
+const deps = require('./package.json').dependencies;
 module.exports = (_, argv) => ({
-  output: {
-    publicPath: "http://localhost:8082/",
-  },
+  // output: {
+  //   publicPath: "http://localhost:8082/",
+  // },
 
   resolve: {
-    extensions: [".ts", ".tsx", ".jsx", ".js", ".json"],
+    extensions: ['.ts', '.tsx', '.jsx', '.js', '.json'],
   },
 
   devServer: {
@@ -20,20 +20,20 @@ module.exports = (_, argv) => ({
     rules: [
       {
         test: /\.m?js/,
-        type: "javascript/auto",
+        type: 'javascript/auto',
         resolve: {
           fullySpecified: false,
         },
       },
       {
         test: /\.(css|s[ac]ss)$/i,
-        use: ["style-loader", "css-loader", "postcss-loader"],
+        use: ['style-loader', 'css-loader', 'postcss-loader'],
       },
       {
         test: /\.(ts|tsx|js|jsx)$/,
         exclude: /node_modules/,
         use: {
-          loader: "babel-loader",
+          loader: 'babel-loader',
         },
       },
     ],
@@ -41,18 +41,18 @@ module.exports = (_, argv) => ({
 
   plugins: [
     new ModuleFederationPlugin({
-      name: "list",
-      filename: "remoteEntry.js",
+      name: 'list',
+      filename: 'remoteEntry.js',
       remotes: {},
       exposes: {
-        "./List": "./src/App.js",
+        './List': './src/App.js',
       },
       shared: {
         ...deps,
       },
     }),
     new HtmlWebPackPlugin({
-      template: "./src/index.html",
+      template: './src/index.html',
     }),
   ],
 });
