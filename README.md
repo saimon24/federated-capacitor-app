@@ -18,7 +18,6 @@ npm run start
 
 This will start each MFE on a different port. You should be able to see the main host app running on [http://localhost:8080](http://localhost:8080).
 
-```bash
 
 ### Running this example
 
